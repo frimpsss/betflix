@@ -41,7 +41,7 @@ const DetailsPage = () => {
   }
   return (
     <div className="p-6 lg:w-[850px] mx-auto relative pb-8">
-      <div className="lg:text-[1.4rem] text-[0.9rem] mb-4 lg:mb-6 flex items-center gap-3 z-10">
+      <div className="lg:text-[1.7rem] text-[0.9rem] mb-4 lg:mb-6 flex flex-col md:flex-row md:items-center items-start  gap-1 lg:gap-3 z-10">
         <h4
           className="hover:underline cursor-pointer"
           onClick={wrapClick(() => {
@@ -50,11 +50,11 @@ const DetailsPage = () => {
         >
           Discover Movies
         </h4>
-        <p className="text-[1.2rem]"> {" > "}</p>
+        <p className="text-[1.2rem] hidden md:block"> {" > "}</p>
         {isLoading || isFetching ? (
           <div className="bg-gray-200 animate-pulse h-[30px]  w-[150px] lg:h-[40px] rounded-md lg:w-[200px]"></div>
         ) : (
-          <p className="">{movieData?.title}</p>
+          <p className="font-semibold">{movieData?.title}</p>
         )}
       </div>
 
