@@ -1,10 +1,14 @@
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/index.tsx";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <>
-      <div className="w-full h-screen grid place-items-center">
-        <p>Hello world!</p>
-      </div>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   );
 }
 

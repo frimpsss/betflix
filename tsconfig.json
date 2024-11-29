@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/containers/.keep", "src/layouts/.keep"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
